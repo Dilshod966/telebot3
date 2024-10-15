@@ -248,7 +248,15 @@ else {
 
 });
 
-setInterval(faly_oqish, 1500000);
+setInterval(faly_oqish, 150000);
+
+setInterval(() => {
+
+  fetch("https://telebot3-9c4kef5p.b4a.run/", {
+    method: "GET" // default, so we can ignore
+})
+
+},60000)
 
 bot.start();
 
