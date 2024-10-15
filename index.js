@@ -1,4 +1,4 @@
-const TELEGRAM_BOT_TOKEN = '7793797009:AAGXNwmSMvoT79sPeaPM5IE4FghZVL5iV8w';
+const TELEGRAM_BOT_TOKEN = '7793797009:AAHWY1JvbAeRS2nvrPG1f3rzSdyooA7_qkI';
 const TeleBot = require('telebot');
 const bot = new TeleBot(TELEGRAM_BOT_TOKEN);
 
@@ -184,6 +184,7 @@ ${workweet[`L${i}`].v}
 
 const https = require('https');
 const fs = require('fs');
+const { error } = require('console');
 let otgan_zamon = 0;
 
 
@@ -245,18 +246,26 @@ else {
 
 
 
-
 });
 
 
 
-
-setInterval(faly_oqish, 150000);
-
 setInterval(() => {
 
-console.log("ishlayapdi");
-},60000)
+https.get('https://telebot3-9c4kef5p.b4a.run/',(response) => {
+  let data = "";
+  response.on('data', (chunk) => {
+    data += chunk;
+  });
+
+  response.on('end', () => {
+    console.log(data);
+  });
+}).on('error', (error) =>  {
+  console.log(error);
+})
+
+},900000)
 
 bot.start();
 
