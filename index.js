@@ -1,4 +1,4 @@
-const TELEGRAM_BOT_TOKEN = '7793797009:AAHWY1JvbAeRS2nvrPG1f3rzSdyooA7_qkI';
+const TELEGRAM_BOT_TOKEN = '7793797009:AAEkJX3NN2S0uUoTir8pDwzRxw_tu5bBKjY';
 const TeleBot = require('telebot');
 const bot = new TeleBot(TELEGRAM_BOT_TOKEN);
 
