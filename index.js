@@ -250,22 +250,7 @@ else {
 
 
 
-setInterval(() => {
 
-https.get('https://telebot3-9c4kef5p.b4a.run/',(response) => {
-  let data = "";
-  response.on('data', (chunk) => {
-    data += chunk;
-  });
-
-  response.on('end', () => {
-    console.log(data);
-  });
-}).on('error', (error) =>  {
-  console.log(error);
-})
-
-},900000)
 
 bot.start();
 
